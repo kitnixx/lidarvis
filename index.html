@@ -91,7 +91,10 @@
 		potreeViewer.scene.addPointCloud(e.pointcloud);
 		e.pointcloud.position.z = 170;
 		let material = e.pointcloud.material;
-		material.pointSizeType = Potree.PointSizeType.ADAPTIVE;
+		material.pointColorType = Potree.PointColorType.ELEVATION; // any Potree.PointColorType.XXXX
+		material.pointSizeType = Potree.PointSizeType.ATTENUATED;
+		material.shape = Potree.PointShape.CIRCLE;
+		material.elevationRange =[0,200]
 
 		potreeViewer.scene.view.position.set(476828.47,  4943195.899999999, 2067.402);
 		potreeViewer.scene.view.lookAt(new THREE.Vector3(476828.47,  4942195.899999999, -0.707));
