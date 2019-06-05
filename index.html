@@ -48,6 +48,7 @@
 	window.cesiumViewer = new Cesium.Viewer('cesiumContainer', {
 		useDefaultRenderLoop: false,
 		animation: false,
+		vrButton: false,
 		baseLayerPicker : false,
 		fullscreenButton: false,
 		terrainProvider : Cesium.createWorldTerrain(),
@@ -94,7 +95,7 @@
 		material.pointColorType = Potree.PointColorType.ELEVATION; // any Potree.PointColorType.XXXX
 		material.pointSizeType = Potree.PointSizeType.ATTENUATED;
 		material.shape = Potree.PointShape.CIRCLE;
-		material.elevationRange =[0,200]
+		material.elevationRange =[190,350]
 
 		potreeViewer.scene.view.position.set(476828.47,  4943195.899999999, 2067.402);
 		potreeViewer.scene.view.lookAt(new THREE.Vector3(476828.47,  4942195.899999999, -0.707));
